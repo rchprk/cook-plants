@@ -12,6 +12,7 @@ const Navbar = class extends React.Component {
     }
   }
 
+  /*
   toggleHamburger = () => {
     // toggle the active boolean in the state
     this.setState(
@@ -30,7 +31,7 @@ const Navbar = class extends React.Component {
             })
       }
     )
-  }
+}*/
 
   render() {
     return (
@@ -41,10 +42,11 @@ const Navbar = class extends React.Component {
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+            <Link to="/" className="navbar-item navbar-logo" title="Logo">
+              <img src={logo} alt="Cook Plants" style={{ width: '200px' }} />
             </Link>
             {/* Hamburger menu */}
+
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
@@ -77,16 +79,7 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+
             </div>
           </div>
         </div>

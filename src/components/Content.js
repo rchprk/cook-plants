@@ -1,3 +1,5 @@
+//Content.js is
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
