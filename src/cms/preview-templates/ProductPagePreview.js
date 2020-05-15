@@ -1,3 +1,4 @@
+/*
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ProductPageTemplate } from '../../templates/product-page'
@@ -54,3 +55,4 @@ ProductPagePreview.propTypes = {
 }
 
 export default ProductPagePreview
+*/
