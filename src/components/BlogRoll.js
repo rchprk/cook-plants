@@ -16,12 +16,10 @@ class BlogRoll extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent column is-12" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
+                className={`blog-list-item tile is-child box notification`}
               >
                 <header>
-                  {post.frontmatter.featuredimage ? (
+                {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -30,21 +28,22 @@ class BlogRoll extends React.Component {
                         }}
                       />
                     </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                  </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                </p>
+                ) : null}
+                <div>
+                    <p className="post-meta">
+                        <Link
+                          className="title has-text-primary is-size-4"
+                          to={post.fields.slug}
+                        >
+                          {post.frontmatter.title}
+                        </Link>
+                    </p>
+                    <p className="preview">
+                      {post.excerpt}
+                      <br />
+                    </p>
+                </div>
                 </header>
-
               </article>
             </div>
           ))}
@@ -79,7 +78,6 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
                   childImageSharp {
