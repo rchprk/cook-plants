@@ -11,17 +11,15 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+
+      <div className="all-blog-list">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-12" key={post.id}>
-              <article
-                className={`blog-list-item box `}
-                //className={`blog-list-item tile is-child box notification`}
-              >
-                <header>
+
+            <div className="is-parent columns is-12 blog-list-item box" key={post.id}>
+
                 {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail image">
+                    <div className="featured-thumbnail column is-narrow">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
@@ -30,7 +28,8 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                 ) : null}
-                <div>
+
+                <div className="post-text column box">
                     <p className="post-meta">
                         <Link
                           className="title has-text-primary is-size-4"
@@ -44,8 +43,7 @@ class BlogRoll extends React.Component {
                       <br />
                     </p>
                 </div>
-                </header>
-              </article>
+
             </div>
           ))}
       </div>
@@ -96,3 +94,47 @@ export default () => (
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 )
+
+
+
+{/* paste after return in between brackets - original one column version
+    <div className="all-blog-list">
+      {posts &&
+        posts.map(({ node: post }) => (
+          <div className="is-parent columns is-12" key={post.id}>
+            <article
+              className={`blog-list-item box `}
+              //className={`blog-list-item tile is-child box notification`}
+            >
+              <header>
+              {post.frontmatter.featuredimage ? (
+                  <div className="featured-thumbnail column is-narrow">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: post.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                      }}
+                    />
+                  </div>
+              ) : null}
+
+              <div className="post-text column box">
+                  <p className="post-meta">
+                      <Link
+                        className="title has-text-primary is-size-4"
+                        to={post.fields.slug}
+                      >
+                        {post.frontmatter.title}
+                      </Link>
+                  </p>
+                  <p className="preview">
+                    {post.excerpt}
+                    <br />
+                  </p>
+              </div>
+              </header>
+            </article>
+          </div>
+        ))}
+    </div>
+    */}

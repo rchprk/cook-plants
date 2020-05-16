@@ -1,43 +1,50 @@
 @import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
-$cook-plants-black: #000000
-$test: $cook-plants-black
+$cp-black: #000000
+$cp-white: #ffffff
+$test: $cp-black
 $kaldi-red-invert: #fff
 
-$primary: $cook-plants-black
+$primary: $cp-black
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
 .navbar .navbar-menu
     box-shadow:none !important
-    background-color: transparent
+    //background-color: transparent
     height: 5rem
     display: flex
     align-items: center
 .navbar-logo
-    -webkit-box-shadow: inset 0 0 0 1px transparent !important
-    box-shadow: inset 0 0 0 1px transparent !important
+    border: none !important
 
 .navbar-item
     font-size: 17px
     font-size: 1rem
     line-height: 0.5
-    background-color: transparent
+    //background-color: transparent
     text-decoration: none
     font-weight: 400
-    color: $cook-plants-black
+    color: $cp-black
     text-align: center
-    border-radius: 2rem
-    -webkit-box-shadow: inset 0 0 0 1px $cook-plants-black
-    box-shadow: inset 0 0 0 1px $cook-plants-black
+    border-radius: 1rem
+    border: 1px solid $cp-black
     margin-left: 0.5rem
     margin-right: 0.5rem
 
-//Nav item hover:
-$link: $cook-plants-black
+.navbar-item:hover
+    background-color: $cp-black
 
+
+//Nav item hover:
+$text: $cp-black
+$navbar-item-hover-color: $cp-white
+$navbar-item-hover-background-color: $cp-black
+$navbar-tab-hover-background-color: $cp-black
+$scheme-main-bis: $cp-black
+$navbar-dropdown-item-hover-background-color: $cp-black
 
 .content .taglist
     list-style: none
@@ -87,10 +94,10 @@ $link: $cook-plants-black
     border-radius: 2rem
     text-decoration: none
     font-weight: 700
-    color: $cook-plants-black
+    color: $cp-black
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 1px $cook-plants-black
-    box-shadow: inset 0 0 0 2px $cook-plants-black
+    -webkit-box-shadow: inset 0 0 0 1px $cp-black
+    box-shadow: inset 0 0 0 2px $cp-black
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
@@ -141,8 +148,8 @@ $menu-label-color: $white-ter
 // blog roll
 .blog-list-item
     background-color: #ffffff
-    -webkit-box-shadow: inset 0 0 0 1px $cook-plants-black
-    box-shadow: inset 0 0 0 2px $cook-plants-black
+    -webkit-box-shadow: inset 0 0 0 1px $cp-black
+    box-shadow: inset 0 0 0 2px $cp-black
     border-radius: 1rem
 
 .blog-list-item header
