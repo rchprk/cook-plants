@@ -16,11 +16,12 @@ class BlogRoll extends React.Component {
           posts.map(({ node: post }) => (
             <div className="is-parent column is-12" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification`}
+                className={`blog-list-item box `}
+                //className={`blog-list-item tile is-child box notification`}
               >
                 <header>
                 {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
+                    <div className="featured-thumbnail image">
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
