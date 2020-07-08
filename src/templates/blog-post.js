@@ -100,6 +100,9 @@ export const pageQuery = graphql`
         title
         description
         tags
+        serves
+        cost
+        time
       }
     }
   }

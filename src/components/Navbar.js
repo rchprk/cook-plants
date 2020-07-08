@@ -12,26 +12,25 @@ const Navbar = class extends React.Component {
     }
   }
 
-  /*
   toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-}*/
+      // toggle the active boolean in the state
+      this.setState(
+        {
+          active: !this.state.active,
+        },
+        // after state has been updated,
+        () => {
+          // set the class in state for the navbar accordingly
+          this.state.active
+            ? this.setState({
+                navBarActiveClass: 'is-active',
+              })
+            : this.setState({
+                navBarActiveClass: '',
+              })
+        }
+      )
+    }
 
   render() {
     return (
@@ -46,7 +45,6 @@ const Navbar = class extends React.Component {
               <img src={logo} alt="Cook Plants" style={{ width: '200px' }} />
             </Link>
             {/* Hamburger menu */}
-
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
@@ -56,12 +54,12 @@ const Navbar = class extends React.Component {
               <span />
               <span />
             </div>
+
           </div>
           <div
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
               <Link className="navbar-item" to="/about">
                 About
               </Link>
@@ -74,10 +72,6 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-
-            </div>
           </div>
         </div>
       </nav>

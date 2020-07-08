@@ -12,13 +12,15 @@ $body-color: #333
 $black: #2b2523
 
 .navbar .navbar-menu
-    box-shadow:none !important
+    box-shadow: none !important
     //background-color: transparent
     height: 5rem
-    display: flex
+    display: none
     align-items: center
-.navbar-logo
-    border: none !important
+
+.navbar-burger
+
+$navbar-breakpoint: 1000000px
 
 .navbar-item
     font-size: 17px
@@ -29,8 +31,6 @@ $black: #2b2523
     font-weight: 400
     color: $cp-black
     text-align: center
-    border-radius: 1rem
-    border: 1px solid $cp-black
     margin-left: 0.5rem
     margin-right: 0.5rem
 
@@ -45,6 +45,30 @@ $navbar-item-hover-background-color: $cp-black
 $navbar-tab-hover-background-color: $cp-black
 $scheme-main-bis: $cp-black
 $navbar-dropdown-item-hover-background-color: $cp-black
+
+//Food list (Breakfast,Lunch,Dinner)
+.meal-item
+    font-size: 17px
+    font-size: 1rem
+    line-height: 0.5
+    //background-color: transparent
+    text-decoration: none
+    font-weight: 400
+    color: $cp-black
+    text-align: center
+    margin-left: 1rem
+    margin-right: 1rem
+
+.meal-item:hover
+    text-decoration: underline
+
+.meal-list
+    height: 5rem
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    justify-content: center
+    align-items: center
 
 .content .taglist
     list-style: none
@@ -153,13 +177,25 @@ $menu-label-color: $white-ter
     border-radius: 1rem
 
 .blog-list-item header
-    display: flex
     margin-bottom: 1em
 .blog-list-item .featured-thumbnail
     flex-basis: 100%
     margin: 0 1.5em 0 0
-.blog-list-item title
-    width: 30vw
+.blog-list-item .title
+    display: block !important   //make width equal to parent
+    color: #f00 !important
+    position: absolute !important //text position is relative to parent
+    top: -1em !important //Text over image
+.blog-list-item table, tr, th, td
+    border: none !important
+    padding: 0em !important
+    //max-width: 50% !important
+    white-space: nowrap !important
+    text-align: left
+.blog-list-item table
+    width: 50% !important
+    margin-left: auto
+    margin-right: auto
 
 @import "~bulma"
 
