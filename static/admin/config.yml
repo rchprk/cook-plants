@@ -20,6 +20,11 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - label: "Meal"
+        name: "meal"
+        widget: "select"
+        multiple: true
+        options: ["Breakfast", "Lunch", "Dinner", "Dessert"]
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Recipe Serves", name: "serves", widget: "string"}
       - {label: "Recipe Cost", name: "cost", widget: "string"}
@@ -27,11 +32,7 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Meal"
-        name: "meal"
-        widget: "select"
-        multiple: true
-        options: ["Breakfast", "Lunch", "Dinner", "Dessert"]
+
 
   - name: "pages"
     label: "Pages"
