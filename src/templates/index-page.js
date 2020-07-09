@@ -8,12 +8,7 @@ import BlogRoll from '../components/BlogRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  description,
-  intro,
+
 }) => (
     <section className="section section--gradient">
 
