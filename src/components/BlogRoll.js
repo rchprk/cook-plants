@@ -37,24 +37,24 @@ class BlogRoll extends React.Component {
                       {post.frontmatter.title}
                     </Link>
                   </p>
-                  <table>
-                      <tr>
-                        <th>Serves</th>
-                        <td>{post.frontmatter.serves}</td>
-                      </tr>
-                      <tr>
-                        <th>Cost</th>
-                        <td>{post.frontmatter.cost}</td>
-                      </tr>
-                      <tr>
-                        <th>Time</th>
-                        <td>{post.frontmatter.time}</td>
-                      </tr>
-                  </table>
+                  <div className="serves-cost-time-table">
+                      <table>
+                          <tr>
+                            <th>Serves</th>
+                            <td>{post.frontmatter.serves}</td>
+                          </tr>
+                          <tr>
+                            <th>Cost</th>
+                            <td>{post.frontmatter.cost}</td>
+                          </tr>
+                          <tr>
+                            <th>Time</th>
+                            <td>{post.frontmatter.time}</td>
+                          </tr>
+                      </table>
+                  </div>
                 </header>
-                <p>
-                  {post.excerpt}
-                </p>
+
               </article>
             </div>
           ))}
