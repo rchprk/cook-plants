@@ -16,7 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
+              meal
               templateKey
             }
           }
@@ -35,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
+        meal: edge.node.frontmatter.meal,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
@@ -46,24 +46,24 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    // Tag pages:
-    let tags = []
-    // Iterate through each post, putting all found tags into `tags`
+    // Meal pages:
+    let meal = []
+    // Iterate through each post, putting all found meal into `meal`
     posts.forEach((edge) => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+      if (_.get(edge, `node.frontmatter.meal`)) {
+        meal = meal.concat(edge.node.frontmatter.meal)
       }
     })
-    // Eliminate duplicate tags
-    tags = _.uniq(tags)
+    // Eliminate duplicate meal
+    meal = _.uniq(meal)
 
     // Make tag pages
-    tags.forEach((tag) => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
+    meal.forEach((tag) => {
+      const tagPath = `/meal/${_.kebabCase(tag)}/`
 
       createPage({
         path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
+        component: path.resolve(`src/templates/meal.js`),
         context: {
           tag,
         },

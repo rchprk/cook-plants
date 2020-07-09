@@ -7,7 +7,7 @@ cost: $1
 time: 1min
 description: Description
 featuredimage: /img/cp-bowl-1.png
-tags:
+meal:
   - Recipe
 ---
 Body
