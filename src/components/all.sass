@@ -175,6 +175,10 @@ $menu-label-color: $white-ter
     -webkit-box-shadow: inset 0 0 0 1px $cp-black
     box-shadow: inset 0 0 0 2px $cp-black
     border-radius: 1rem
+.blog-list-item.notification.box    //blogroll background/container
+    background-color: transparent !important
+    //border: none !important
+    //box-shadow: none !important
 
 .blog-list-item header
     margin-bottom: 1em
@@ -184,7 +188,10 @@ $menu-label-color: $white-ter
     margin: 0 1.5em 0 0
 .blog-list-item .title
     display: block !important   //make width equal to parent
-    color: #f00 !important
+    width: 60%
+    text-align: left
+    color: $cp-black
+    text-decoration: none
     position: absolute !important //text position is relative to parent
     top: -1em !important //Text over image
 .blog-list-item table, tr, th, td
