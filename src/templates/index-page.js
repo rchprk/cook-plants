@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-//import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 //import Features from '../components/Features'
@@ -16,12 +16,29 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
     <section className="section section--gradient">
+
       <div className="container">
+
         <div className="section">
+        <div
+          className="meal-list"
+        >
+            <Link className="meal-item" to="/about">
+              Breakfast
+            </Link>
+            <Link className="meal-item" to="/blog">
+              Lunch
+            </Link>
+            <Link className="meal-item" to="/contact">
+              Dinner
+            </Link>
+            <Link className="meal-item" to="/contact/examples">
+              Dessert
+            </Link>
+        </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
-
                 <div className="column is-12">
                   <BlogRoll />
                   <div className="column is-1 has-text-centered">
@@ -52,13 +69,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+
       />
     </Layout>
   )

@@ -40,10 +40,9 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="container">
+
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item navbar-logo" title="Logo">
-              <img src={logo} alt="Cook Plants" style={{ width: '200px' }} />
-            </Link>
+          <h1>COOK PLANTS</h1>
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}

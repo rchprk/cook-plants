@@ -11,6 +11,16 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
+.navbar h1
+    font-size: 30px
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+.navbar .container
+    margin: 0 !important
+    max-width: 100% !important
+    padding-top: 0.8em !important
+    padding-bottom: 0.8em !important
 .navbar .navbar-menu
     box-shadow: none !important
     //background-color: transparent
@@ -19,6 +29,10 @@ $black: #2b2523
     align-items: center
 
 .navbar-burger
+    margin-left: 1em !important
+    margin-right: 1em !important
+    right: 0 !important
+    position: absolute !important
 
 $navbar-breakpoint: 1000000px
 
@@ -46,6 +60,14 @@ $navbar-tab-hover-background-color: $cp-black
 $scheme-main-bis: $cp-black
 $navbar-dropdown-item-hover-background-color: $cp-black
 
+//section
+.section.section--gradient
+    padding: 0 !important
+
+.section.section--gradient .container .section
+    padding: 0 !important
+
+
 //Food list (Breakfast,Lunch,Dinner)
 .meal-item
     font-size: 17px
@@ -63,9 +85,10 @@ $navbar-dropdown-item-hover-background-color: $cp-black
     text-decoration: underline
 
 .meal-list
-    height: 5rem
+    height: 6rem
     margin-left: auto
     margin-right: auto
+    margin-bottom: 3rem
     display: flex
     justify-content: center
     align-items: center
@@ -177,21 +200,24 @@ $menu-label-color: $white-ter
     border-radius: 1rem
 .blog-list-item.notification.box    //blogroll background/container
     background-color: transparent !important
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem !important
+    margin-bottom: 2rem !important
     //border: none !important
-    //box-shadow: none !important
-
+    box-shadow: none !important
 .blog-list-item header
     margin-bottom: 1em
     text-align: center
 .blog-list-item .featured-thumbnail
     flex-basis: 100%
-    margin: 0 1.5em 0 0
+    max-width: 100% !important
+    margin: 0 0 0 0
 .blog-list-item .title
     display: block !important   //make width equal to parent
+    margin-left: 1em
     width: 60%
     text-align: left
-    color: $cp-black
-    text-decoration: none
+    color: $cp-black !important
+    text-decoration: none !important
     position: absolute !important //text position is relative to parent
     top: -1em !important //Text over image
 .blog-list-item table, tr, th, td
