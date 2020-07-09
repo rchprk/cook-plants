@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Layout from '../components/Layout'
+import LayoutMain from '../components/LayoutMain'
 //import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
@@ -62,12 +62,12 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <LayoutMain>
       <IndexPageTemplate
         title={frontmatter.title}
 
       />
-    </Layout>
+    </LayoutMain>
   )
 }
 

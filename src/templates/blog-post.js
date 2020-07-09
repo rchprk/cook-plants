@@ -3,13 +3,12 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
+import LayoutPost from '../components/LayoutPost'
 import Content, { HTMLContent } from '../components/Content'
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   meal,
   title,
   helmet,
@@ -25,11 +24,22 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+
             <PostContent content={content} />
+
+
+
+            <div className="recipe-body">
+
+                <div className="recipe-ingredients"></div>
+                <div className="recipe-method"></div>
+            </div>
+
+
+
+
             {meal && meal.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Meal</h4>
                 <ul className="taglist">
                   {meal.map((tag) => (
                     <li key={tag + `tag`}>
@@ -49,7 +59,6 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -58,11 +67,10 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
+    <LayoutPost>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -75,7 +83,7 @@ const BlogPost = ({ data }) => {
         meal={post.frontmatter.meal}
         title={post.frontmatter.title}
       />
-    </Layout>
+    </LayoutPost>
   )
 }
 
@@ -95,7 +103,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         meal
         serves
         cost

@@ -2,7 +2,7 @@ import React from 'react'
 import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import Layout from '../../components/Layout'
+import LayoutMain from '../../components/LayoutMain'
 
 const MealPage = ({
   data: {
@@ -12,7 +12,7 @@ const MealPage = ({
     },
   },
 }) => (
-  <Layout>
+  <LayoutMain>
     <section className="section">
       <Helmet title={`Meal | ${title}`} />
       <div className="container content">
@@ -35,7 +35,7 @@ const MealPage = ({
         </div>
       </div>
     </section>
-  </Layout>
+  </LayoutMain>
 )
 
 export default MealPage
