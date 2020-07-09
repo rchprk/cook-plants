@@ -27,7 +27,11 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - label: "Tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        options: ["Breakfast", "Lunch", "Dinner", "Dessert"]
 
   - name: "pages"
     label: "Pages"
