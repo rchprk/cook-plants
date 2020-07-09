@@ -6,7 +6,7 @@ serves: "1"
 cost: $1
 time: 1min
 description: Description
-featuredimage: /img/blog-index.jpg
+featuredimage: /img/cp-bowl-1.png
 tags:
   - Recipe
 ---
