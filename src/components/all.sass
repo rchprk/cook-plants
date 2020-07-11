@@ -60,6 +60,80 @@ $navbar-tab-hover-background-color: $cp-black
 $scheme-main-bis: $cp-black
 $navbar-dropdown-item-hover-background-color: $cp-black
 
+
+//BlogPost ---------
+//Recipe Subheading
+.recipe-body .recipe-subheading
+    display: inline-block
+.recipe-body .recipe-subheading td
+    border: 1.5px solid black !important
+    padding: 0em 0.5em 0em 0.5em !important
+    text-align: center !important
+.blog-list-item table
+    margin-left: 0.5em
+    margin-bottom: 0.3em
+
+//Ingredients List
+.recipe-ingredients .ingredients-list
+    list-style: none
+    margin: 0
+.recipe-ingredients .ingredients-list li
+    margin: 0
+//Checkbox:
+.recipe-ingredients .checkbox-ingredient-container
+    cursor: pointer
+    height: 100%
+    display: inline-flex
+    align-items: center
+
+.recipe-ingredients .checkbox-container
+    display: inline-block
+    margin-right: 0.8em
+    margin-left: 0.3em
+
+.recipe-ingredients .checkbox-container input
+    opacity: 0
+    cursor: pointer
+    position: absolute
+
+.recipe-ingredients .checkbox-container .checkmark
+    height: 1.2em
+    width: 1.2em
+    background-color: transparent
+    border: 1.3px solid $cp-black
+    position: relative
+    z-index: 1
+/* When the checkbox is checked, add a blue background */
+.recipe-ingredients .checkbox-container input:checked ~ .checkmark
+    background-color: $cp-white
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after
+    content: ""
+    display: none
+/* Show the checkmark when checked */
+.recipe-ingredients .checkbox-container input:checked ~ .checkmark:after
+    display: block
+/* Style the checkmark/indicator */
+.recipe-ingredients .checkbox-container .checkmark:after
+    //Checkmark positioning:
+    position: absolute
+    left: 33%
+    top: 5%
+
+    width: 0.35em
+    height: 0.7em
+    border: solid $cp-black
+    border-width: 0 1.3px 1.3px 0
+    transform: rotate(45deg)
+
+
+
+
+
+
+
+
 //section
 .section.section--gradient
     padding: 0 !important
@@ -225,13 +299,11 @@ $menu-label-color: $white-ter
     padding: 0em !important
     //max-width: 50% !important
     text-align: left
-
 .blog-list-item table
     margin-left: 0.5em
     margin-bottom: 0.3em
 .blog-list-item .serves-cost-time-table
     border-left: 1px solid $cp-black
-
     display: inline-block
     white-space: nowrap !important
     width: 55% !important

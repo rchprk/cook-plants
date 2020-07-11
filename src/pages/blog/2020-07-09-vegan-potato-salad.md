@@ -11,6 +11,8 @@ featuredimage: /img/cp-bowl-1.png
 meal:
   - flavor
   - tasting
+ingredients:
+  - 1 tbsp coffee
 ---
 
 

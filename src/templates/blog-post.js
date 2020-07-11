@@ -12,6 +12,7 @@ export const BlogPostTemplate = ({
   meal,
   title,
   helmet,
+  ingredients,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -28,12 +29,67 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
 
 
-
             <div className="recipe-body">
+                <div className="recipe-ingredients">
+                    <div className="recipe-subheading">
+                        <table>
+                          <tr>
+                            <td>1</td>
+                            <td>Ingredients</td>
+                          </tr>
+                        </table>
+                    </div>
 
-                <div className="recipe-ingredients"></div>
-                <div className="recipe-method"></div>
-            </div>
+                    {ingredients && ingredients.length ? (
+
+                        <ul className="ingredients-list">
+                          {ingredients.map((tag) => (
+                            <li key={tag + `tag`}>
+                                <label className="checkbox-ingredient-container">
+                                    <div className="checkbox-container">
+                                        <input type="checkbox"/>
+                                        <div className="checkmark"></div>
+
+                                    </div>
+
+                                  <span>{tag}</span>
+                                </label>
+                            </li>
+                          ))}
+                        </ul>
+                    ) : null}
+
+                    </div>
+                    <div className="recipe-method">
+                    <div className="recipe-subheading">
+                        <table>
+                          <tr>
+                            <td>2</td>
+                            <td>Method</td>
+                          </tr>
+                        </table>
+                    </div>
+
+                    <ol className="method-list">
+                      {method.map((tag) => (
+                        <li key={tag + `tag`}>
+                            <label className="checkbox-ingredient-container">
+                                <div className="checkbox-container">
+                                    <input type="checkbox"/>
+                                    <div className="checkmark"></div>
+
+                                </div>
+
+                              <span>{tag}</span>
+                            </label>
+                        </li>
+                      ))}
+                    </ol>
+
+
+
+                    </div>
+                </div>
 
 
 
@@ -82,6 +138,7 @@ const BlogPost = ({ data }) => {
         }
         meal={post.frontmatter.meal}
         title={post.frontmatter.title}
+        ingredients={post.frontmatter.ingredients}
       />
     </LayoutPost>
   )
@@ -107,6 +164,7 @@ export const pageQuery = graphql`
         serves
         cost
         time
+        ingredients
       }
     }
   }

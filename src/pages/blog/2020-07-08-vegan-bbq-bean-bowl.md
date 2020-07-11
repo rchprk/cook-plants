@@ -9,5 +9,7 @@ description: Description
 featuredimage: /img/cp-bowl-1.png
 meal:
   - Recipe
+ingredients:
+  - 1 tbsp coffee
 ---
 Body
