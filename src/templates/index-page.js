@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
             <Link className="meal-item" to="/about">
               Breakfast
             </Link>
-            <Link className="meal-item" to="/blog">
+            <Link className="meal-item" to="/recipe">
               Lunch
             </Link>
             <Link className="meal-item" to="/contact">
