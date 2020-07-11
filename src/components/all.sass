@@ -62,6 +62,13 @@ $navbar-dropdown-item-hover-background-color: $cp-black
 
 
 //BlogPost ---------
+//Recipe Method and Ingredients Spacing
+.recipe-ingredients,.recipe-method
+    margin-top: 3em
+//'Recipe' text and date
+.recipe-text,.date
+    text-decoration: underline
+    text-align: center
 //Recipe Subheading
 .recipe-body .recipe-subheading
     display: inline-block
@@ -128,18 +135,33 @@ $navbar-dropdown-item-hover-background-color: $cp-black
     transform: rotate(45deg)
 
 //Method list
-ol
-  list-style-type: none
-  counter-reset: elementcounter
-  padding-left: 0
+.method-list
+    clear: both
+    list-style: none
+.recipe-method ol
+    margin-left: 2.3em !important
+    margin-top: 2em !important
+.method-list li
+    margin-bottom: 2em
+    margin-left: 0
+    //padding-top: 1em
+    display: block
+    position: relative
+    counter-increment: inst
+.method-list li::before
+    content: "Step " counter(inst)
+    padding-top: 0
+    top: -1.4em
+    position: absolute
+    z-index: -1
+.method-list .step-arrow
+    padding-top: 0
+    top: -1.4em
+    left: -2.3em
+    position: absolute
 
-
-li:before
-  content: "Step " counter(elementcounter)
-  counter-increment: elementcounter
-  font-weight: bold
-
-
+    width: 2em
+    height: 2em
 
 
 

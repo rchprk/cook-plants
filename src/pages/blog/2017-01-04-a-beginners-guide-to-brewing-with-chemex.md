@@ -10,10 +10,11 @@ description: Brewing with a Chemex probably seems like a complicated,
   soothing ritual that's worth the effort every time.
 featuredimage: /img/cp-bowl-1.png
 meal:
-  - brewing
-  - chemex
+  - Breakfast
 ingredients:
   - 1 tbsp coffee
+method:
+  - Sift flour and sugar together.
 ---
 ![chemex](/img/chemex.jpg)
 

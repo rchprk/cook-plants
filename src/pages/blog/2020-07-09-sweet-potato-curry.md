@@ -8,8 +8,10 @@ time: 2hrs
 description: Sweet Potato Curry Recipe (Post Description)
 featuredimage: /img/cp-bowl-1.png
 meal:
-  - Sweet Potato Curry Recipe (Post Tag)
+  - Lunch
 ingredients:
   - 1 tbsp coffee
+method:
+  - Sift flour and sugar together.
 ---
 Sweet Potato Curry Recipe (Post Body)

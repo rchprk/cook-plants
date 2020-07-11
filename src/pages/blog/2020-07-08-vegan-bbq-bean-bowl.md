@@ -8,8 +8,10 @@ time: 1min
 description: Description
 featuredimage: /img/cp-bowl-1.png
 meal:
-  - Recipe
+  - Breakfast
 ingredients:
   - 1 tbsp coffee
+method:
+  - Sift flour and sugar together.
 ---
 Body

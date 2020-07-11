@@ -34,3 +34,7 @@ collections:
         name: "ingredients"
         widget: "list"
         field: {name: "ingredient", label: "Ingredient", widget: "string" }
+      - label: "Method"
+        name: "method"
+        widget: "list"
+        field: {name: "step", label: "Step", widget: "string" }

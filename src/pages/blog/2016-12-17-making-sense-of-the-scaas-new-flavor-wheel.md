@@ -9,9 +9,11 @@ description: The Coffee Taster’s Flavor Wheel, the official resource used by
   coffee tasters, has been revised for the first time this year.
 featuredimage: /img/cp-bowl-1.png
 meal:
-  - breakfast
+  - Breakfast
 ingredients:
   - 1 tbsp coffee
+method:
+  - Sift flour and sugar together.
 ---
 
 

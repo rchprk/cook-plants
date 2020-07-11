@@ -89,7 +89,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "MM/DD")
                 serves
                 cost
                 time
