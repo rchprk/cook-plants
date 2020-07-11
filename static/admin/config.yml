@@ -33,4 +33,8 @@ collections:
       - label: "Ingredients"
         name: "ingredients"
         widget: "list"
-        field: {label: Ingredient, name: ingredient, widget: string}
+            field: {
+                label: Ingredient,
+                name: ingredient,
+                widget: string
+                }

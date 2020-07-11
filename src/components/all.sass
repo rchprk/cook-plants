@@ -127,6 +127,18 @@ $navbar-dropdown-item-hover-background-color: $cp-black
     border-width: 0 1.3px 1.3px 0
     transform: rotate(45deg)
 
+//Method list
+ol
+  list-style-type: none
+  counter-reset: elementcounter
+  padding-left: 0
+
+
+li:before
+  content: "Step " counter(elementcounter)
+  counter-increment: elementcounter
+  font-weight: bold
+
 
 
 

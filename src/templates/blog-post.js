@@ -61,34 +61,21 @@ export const BlogPostTemplate = ({
 
                     </div>
                     <div className="recipe-method">
-                    <div className="recipe-subheading">
-                        <table>
-                          <tr>
-                            <td>2</td>
-                            <td>Method</td>
-                          </tr>
-                        </table>
-                    </div>
 
-                    <ol className="method-list">
-                      {method.map((tag) => (
-                        <li key={tag + `tag`}>
-                            <label className="checkbox-ingredient-container">
-                                <div className="checkbox-container">
-                                    <input type="checkbox"/>
-                                    <div className="checkmark"></div>
-
-                                </div>
-
-                              <span>{tag}</span>
-                            </label>
-                        </li>
-                      ))}
-                    </ol>
-
+                        <div className="recipe-subheading">
+                            <table>
+                              <tr>
+                                <td>2</td>
+                                <td>Method</td>
+                              </tr>
+                            </table>
+                        </div>
+                        
 
 
                     </div>
+
+
                 </div>
 
 
