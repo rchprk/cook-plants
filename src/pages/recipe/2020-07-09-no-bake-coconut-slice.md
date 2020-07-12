@@ -1,6 +1,6 @@
 ---
-templateKey: blog-post
-title: No Bake Coconut Slice
+templateKey: recipe-post
+title: Apple Coconut Slice
 date: 2020-07-09T09:27:50.974Z
 serves: "7"
 cost: $15

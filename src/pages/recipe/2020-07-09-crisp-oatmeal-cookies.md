@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: recipe-post
 title: Crisp Oatmeal Cookies
 date: 2020-07-09T09:27:20.516Z
 serves: "1"

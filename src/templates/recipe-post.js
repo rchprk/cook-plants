@@ -1,21 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import LayoutPost from '../components/LayoutPost'
 import Content, { HTMLContent } from '../components/Content'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 
-export const BlogPostTemplate = ({
+export const RecipePostTemplate = ({
   content,
   contentComponent,
   meal,
   date,
   title,
   featuredimage,
-  helmet,
   ingredients,
   method,
 }) => {
@@ -23,45 +21,59 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="recipe-info-and-images">
-                <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-                  {title}
-                </h1>
+
+      <div className="container content recipe">
+            <div className="recipe-split recipe-info-and-images left">
                 <div className="date">
                     <span>{date}</span>
                 </div>
 
-                <div className="meal">
-                    {meal && meal.length ? (
-                      <div style={{ marginTop: `4rem` }}>
-                        <ul className="taglist">
-                          {meal.map((tag) => (
-                            <li key={tag + `tag`}>
-                              <Link to={`/meal/${kebabCase(tag)}/`}>{tag}</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ) : null}
-                </div>
-                <div className="featured-image">
-                    {featuredimage ? (
-                      <div className="ft">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: featuredimage,
-                            alt: `featured image thumbnail for post ${title}`,
-                          }}
-                        />
-                      </div>
-                    ) : null}
-                    <span>image here</span>
+                    <div className="title-padding">
+                        <h1 className="fake">
+                          {title}
+                        </h1>
+                    </div>
+                <div className="featured-image-and-title">
+
+
+
+
+                    <div className="title">
+
+                        <h1 className="real">
+                          {title}
+                        </h1>
+                    </div>
+
+                    <div className="featured-image">
+                        {featuredimage ? (
+                          <div className="ft">
+                            <PreviewCompatibleImage
+                              imageInfo={{
+                                image: featuredimage,
+                                alt: `featured image thumbnail for post ${title}`,
+                              }}
+                            />
+
+                          </div>
+                        ) : null}
+                    </div>
+
 
                 </div>
+
+                <div className="meal">
+                    {meal && meal.length ? (
+                        <ul>
+                          {meal.map((tag) => (
+                            <span key={tag + `tag`}>
+                             {tag}
+                            </span>
+                          ))}
+                        </ul>
+                    ) : null}
+                </div>
+
 
 
 
@@ -69,13 +81,14 @@ export const BlogPostTemplate = ({
             </div>
 
 
-            <PostContent content={content} />
 
 
 
 
-            <div className="recipe-body">
-                <div className="recipe-text">Recipe</div>
+            <div className="recipe-split recipe-body right">
+                <div className="recipe-text">
+                    <span>Recipe</span>
+                </div>
                 <div className="recipe-ingredients">
                     <div className="recipe-subheading">
                         <table>
@@ -128,37 +141,26 @@ export const BlogPostTemplate = ({
                         </ol>
                     </div>
                 </div>
-          </div>
-        </div>
       </div>
     </section>
   )
 }
 
-BlogPostTemplate.propTypes = {
+RecipePostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
-  helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const RecipePost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <LayoutPost>
-      <BlogPostTemplate
+      <RecipePostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        helmet={
-          <Helmet titleTemplate="%s | Cook Plants">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
+
         date={post.frontmatter.date}
         meal={post.frontmatter.meal}
         title={post.frontmatter.title}
@@ -170,16 +172,16 @@ const BlogPost = ({ data }) => {
   )
 }
 
-BlogPost.propTypes = {
+RecipePost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default RecipePost
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query RecipePostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -194,7 +196,7 @@ export const pageQuery = graphql`
         method
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 120, quality: 100) {
+            fluid(maxWidth: 300, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

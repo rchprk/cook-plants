@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: recipe-post
 title: Vegan BBQ Bean Bowl
 date: 2020-07-08T07:26:32.120Z
 serves: "1"

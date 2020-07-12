@@ -60,23 +60,88 @@ $navbar-tab-hover-background-color: $cp-black
 $scheme-main-bis: $cp-black
 $navbar-dropdown-item-hover-background-color: $cp-black
 
+//Recipe post Layout (split window)
+.recipe .recipe-split
+    height: 100%
+    width: 50%
+    position: fixed
+    z-index: 1
+    top: 0
+    overflow-x: hidden
+    padding: 10px 35px 20px
+.recipe .left
+    left: 0
+    border-right: 1px solid $cp-black
+.recipe .right
+    right: 0
+    border-left: 1px solid $cp-black
 
-//BlogPost ---------
+//Recipe Info and images Layout
+/* Container holding the image and the text */
+.recipe .title
+    position: absolute
+    width: 100%
+    //double padding of split screen
+    padding-right: 70px
+
+
+.recipe h1
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+
+    padding-left: 1em
+    padding-right: 1em
+    font-size: 6vw !important
+    line-height: 90% !important
+    text-align: center
+
+    word-break: keep-all
+
+.recipe .real
+    transform: translateY(-85%)
+    position: relative
+    z-index: 1
+
+.recipe .title-padding
+    visibility: hidden
+.recipe .fake
+    color: red
+    //85% (translateY value) of 90 (h1 line height)
+    line-height: 75% !important
+
+.featured-image
+    width: 75%
+    margin: 0 auto
+
+.recipe .meal
+    display: inline-block
+    transform: rotate(-90deg) translateX(50%)
+    position: fixed
+    top: 50%
+    left: 0
+
+.meal ul
+    margin: 0 !important
+
+//RecipePost ---------
 //Recipe Method and Ingredients Spacing
 .recipe-ingredients,.recipe-method
-    margin-top: 3em
+    margin-bottom: 3em
 //'Recipe' text and date
 .recipe-text,.date
-    text-decoration: underline
     text-align: center
-//Recipe Subheading
+    margin-bottom: 5em
+.recipe-text span,.date span
+    border-bottom: 2px solid currentColor
+
+//Recipe Subheadings
 .recipe-body .recipe-subheading
     display: inline-block
 .recipe-body .recipe-subheading td
-    border: 1.5px solid black !important
+    border: 2px solid black !important
     padding: 0em 0.5em 0em 0.5em !important
     text-align: center !important
-.blog-list-item table
+.recipe-list-item table
     margin-left: 0.5em
     margin-bottom: 0.3em
 
@@ -107,7 +172,7 @@ $navbar-dropdown-item-hover-background-color: $cp-black
     height: 1.2em
     width: 1.2em
     background-color: transparent
-    border: 1.3px solid $cp-black
+    border: 2px solid $cp-black
     position: relative
     z-index: 1
 /* When the checkbox is checked, add a blue background */
@@ -300,26 +365,26 @@ $menu-label-color: $white-ter
     vertical-align: middle
     display: inline
 
-// blog roll
-.blog-list-item
+// recipe roll
+.recipe-list-item
     background-color: #ffffff
     -webkit-box-shadow: inset 0 0 0 1px $cp-black
     box-shadow: inset 0 0 0 2px $cp-black
     border-radius: 1rem
-.blog-list-item.notification.box    //blogroll background/container
+.recipe-list-item.notification.box    //reciperoll background/container
     background-color: transparent !important
     padding: 1.25rem 1.25rem 1.25rem 1.25rem !important
     margin-bottom: 2rem !important
     //border: none !important
     box-shadow: none !important
-.blog-list-item header
+.recipe-list-item header
     margin-bottom: 1em
     text-align: center
-.blog-list-item .featured-thumbnail
+.recipe-list-item .featured-thumbnail
     flex-basis: 100%
     max-width: 100% !important
     margin: 0 0 0 0
-.blog-list-item .title
+.recipe-list-item .title
     display: block !important   //make width equal to parent
     margin-left: 1em
     width: 60%
@@ -328,15 +393,15 @@ $menu-label-color: $white-ter
     text-decoration: none !important
     position: absolute !important //text position is relative to parent
     top: -1em !important //Text over image
-.blog-list-item table, tr, th, td
+.recipe-list-item table, tr, th, td
     border: none !important
     padding: 0em !important
     //max-width: 50% !important
     text-align: left
-.blog-list-item table
+.recipe-list-item table
     margin-left: 0.5em
     margin-bottom: 0.3em
-.blog-list-item .serves-cost-time-table
+.recipe-list-item .serves-cost-time-table
     border-left: 1px solid $cp-black
     display: inline-block
     white-space: nowrap !important
@@ -344,7 +409,7 @@ $menu-label-color: $white-ter
     margin-left: auto
     margin-right: auto
 
-.blog-list-item .serves-cost-time-table:after
+.recipe-list-item .serves-cost-time-table:after
     content: ""  //* This is necessary for the pseudo element to work. */
     display: block //* This will put the pseudo element on its own line. */
     margin-left: 0
@@ -358,13 +423,13 @@ $menu-label-color: $white-ter
 
 // responsiveness
 +tablet-only
-    .blog-list-item .featured-thumbnail
+    .recipe-list-item .featured-thumbnail
         flex-basis: 50%
 
 +mobile
-    .blog-list-item header
+    .recipe-list-item header
         display: block
-    .blog-list-item .featured-thumbnail
+    .recipe-list-item .featured-thumbnail
         text-align: center
         max-width: 70%
         margin: 0 0 1em

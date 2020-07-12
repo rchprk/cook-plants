@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
 
-**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
+**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/recipe/2018-09-17-gatsby-v2/).
 
 This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
 
@@ -10,9 +10,9 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 ## Features
 
-- A simple landing page with blog functionality built with Netlify CMS
-- Editabe Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
-- Create Blog posts from Netlify CMS
+- A simple landing page with recipe functionality built with Netlify CMS
+- Editabe Pages: Landing, About, Product, Recipe-Collection and Contact page with Netlify Form support
+- Create Recipe posts from Netlify CMS
 - meal: Separate page for posts under each tag
 - Basic directory organization
 - Uses Bulma for styling, but size is reduced by `purge-css-plugin`
@@ -48,7 +48,7 @@ $ yarn
 $ netlify dev # or ntl dev
 ```
 
-This uses the new [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=blog&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `lambda` folder.
+This uses the new [Netlify Dev](https://www.netlify.com/products/dev/?utm_source=recipe&utm_medium=netlifycms&utm_campaign=devex) CLI feature to serve any functions you have in the `lambda` folder.
 
 To test the CMS locally, you'll need to run a production build of the site:
 
@@ -67,7 +67,7 @@ import CMS from 'netlify-cms-app'
 // import cloudinary from 'netlify-cms-media-library-cloudinary'
 
 import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
+import RecipePostPreview from './preview-templates/RecipePostPreview'
 import ProductPagePreview from './preview-templates/ProductPagePreview'
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 
@@ -77,7 +77,7 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
 //CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('recipe', RecipePostPreview)
 ```
 
 Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `package-lock.json` using `yarn` or `npm`. During the build netlify-cms-app will bundle the media libraries as well, having them removed will save you build time.

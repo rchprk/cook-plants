@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { BlogPostTemplate } from '../../templates/blog-post'
+import { RecipePostTemplate } from '../../templates/recipe-post'
 
-const BlogPostPreview = ({ entry, widgetFor }) => {
+const RecipePostPreview = ({ entry, widgetFor }) => {
   const meal = entry.getIn(['data', 'meal'])
 
   return (
-    <BlogPostTemplate
+    <RecipePostTemplate
       content={widgetFor('body')}
       description={entry.getIn(['data', 'description'])}
       meal={meal && meal.toJS()}
@@ -16,11 +16,11 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
   )
 }
 
-BlogPostPreview.propTypes = {
+RecipePostPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default BlogPostPreview
+export default RecipePostPreview

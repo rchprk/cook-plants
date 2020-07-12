@@ -12,13 +12,13 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "recipe"
+    label: "Recipe"
     folder: "src/pages/recipe"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "recipe-post"}
       - {label: "Title", name: "title", widget: "string"}
       - label: "Meal"
         name: "meal"

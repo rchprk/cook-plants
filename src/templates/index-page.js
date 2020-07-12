@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import LayoutMain from '../components/LayoutMain'
 //import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import RecipeRoll from '../components/RecipeRoll'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const IndexPageTemplate = ({
@@ -35,7 +35,7 @@ export const IndexPageTemplate = ({
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="column is-12">
-                  <BlogRoll />
+                  <RecipeRoll />
                   <div className="column is-1 has-text-centered">
                   </div>
                 </div>

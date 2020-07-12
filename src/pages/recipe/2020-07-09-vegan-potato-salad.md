@@ -1,6 +1,6 @@
 ---
-templateKey: blog-post
-title: Vegan Potato Salad
+templateKey: recipe-post
+title: Almond Cake
 date: 2020-07-09T09:30:11.553Z
 serves: "7"
 cost: $15

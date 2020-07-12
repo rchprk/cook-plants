@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: recipe-post
 title: Raw Avocado and Tofu Pudding
 date: 2020-07-09T09:29:44.203Z
 serves: "7"

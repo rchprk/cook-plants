@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: recipe-post
 title: Black Bean Buddha Bowl
 date: 2016-12-17T15:04:10.000Z
 serves: "1"

@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: recipe-post
 title: Almond Flour Carrot Cake
 date: 2020-07-09T09:30:34.600Z
 serves: "7"

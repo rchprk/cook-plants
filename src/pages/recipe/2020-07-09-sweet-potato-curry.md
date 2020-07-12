@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: recipe-post
 title: Sweet Potato Curry
 date: 2020-07-09T05:22:38.702Z
 serves: "4"

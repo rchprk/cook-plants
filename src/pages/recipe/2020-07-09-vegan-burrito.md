@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+templateKey: recipe-post
 title: Vegan Burrito
 date: 2020-07-09T09:29:19.997Z
 serves: "7"
