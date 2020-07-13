@@ -17,17 +17,21 @@ class RecipeRoll extends React.Component {
                 className={`recipe-list-item tile is-child box notification`}
               >
                 <header>
+                    <Link
+                      to={post.fields.slug}
+                    >
+                        {post.frontmatter.featuredimage ? (
+                          <div className="featured-thumbnail">
+                            <PreviewCompatibleImage
+                              imageInfo={{
+                                image: post.frontmatter.featuredimage,
+                                alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                              }}
+                            />
+                          </div>
+                        ) : null}
+                    </Link>
 
-                    {post.frontmatter.featuredimage ? (
-                      <div className="featured-thumbnail">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          }}
-                        />
-                      </div>
-                    ) : null}
                   <p className="post-meta">
 
                     <Link

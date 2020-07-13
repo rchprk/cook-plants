@@ -61,6 +61,7 @@ const Navbar = class extends React.Component {
                 id="navMenu overlay-content"
                 className={`navbar-menu ${this.state.navBarActiveClass}`}
               >
+               <div className="overlay">
                   <Link className="navbar-item" to="/about">
                     About
                   </Link>
@@ -73,6 +74,7 @@ const Navbar = class extends React.Component {
                   <Link className="navbar-item" to="/contact/examples">
                     Form Examples
                   </Link>
+              </div>
           </div>
         </div>
       </nav>
