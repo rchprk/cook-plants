@@ -21,12 +21,7 @@ $black: #2b2523
     max-width: 100% !important
     padding-top: 0.8em !important
     padding-bottom: 0.8em !important
-.navbar .navbar-menu
-    box-shadow: none !important
-    //background-color: transparent
-    height: 5rem
-    display: none
-    align-items: center
+
 
 .navbar-burger
     margin-left: 1em !important
@@ -44,13 +39,12 @@ $navbar-breakpoint: 1000000px
     text-decoration: none
     font-weight: 400
     color: $cp-black
-    text-align: center
+    text-align: left
     margin-left: 0.5rem
     margin-right: 0.5rem
 
 .navbar-item:hover
     background-color: $cp-black
-
 
 //Nav item hover:
 $text: $cp-black
@@ -59,6 +53,18 @@ $navbar-item-hover-background-color: $cp-black
 $navbar-tab-hover-background-color: $cp-black
 $scheme-main-bis: $cp-black
 $navbar-dropdown-item-hover-background-color: $cp-black
+
+.overlay-content
+
+.navbar-menu
+    border: solid lime
+    position: fixed !important
+    right: 0 !important
+    top: 0 !important
+    z-index: -1 !important
+    width: 20em !important
+    height: 100%
+    padding-top: 10em !important
 
 //Recipe post Layout (split window)
 .recipe .recipe-split
@@ -190,13 +196,13 @@ $navbar-dropdown-item-hover-background-color: $cp-black
 .recipe-ingredients .checkbox-container .checkmark:after
     //Checkmark positioning:
     position: absolute
-    left: 33%
+    left: 27%
     top: 5%
 
     width: 0.35em
     height: 0.7em
     border: solid $cp-black
-    border-width: 0 1.3px 1.3px 0
+    border-width: 0 2px 2px 0
     transform: rotate(45deg)
 
 //Method list

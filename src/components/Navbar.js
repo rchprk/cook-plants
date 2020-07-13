@@ -55,22 +55,24 @@ const Navbar = class extends React.Component {
             </div>
 
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/recipe">
-                Recipe
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
+
+
+              <div
+                id="navMenu overlay-content"
+                className={`navbar-menu ${this.state.navBarActiveClass}`}
+              >
+                  <Link className="navbar-item" to="/about">
+                    About
+                  </Link>
+                  <Link className="navbar-item" to="/recipe">
+                    Recipes
+                  </Link>
+                  <Link className="navbar-item" to="/contact">
+                    Contact
+                  </Link>
+                  <Link className="navbar-item" to="/contact/examples">
+                    Form Examples
+                  </Link>
           </div>
         </div>
       </nav>
