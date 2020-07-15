@@ -24,6 +24,19 @@ export const RecipePostTemplate = ({
 
       <div className="container content recipe">
             <div className="recipe-split recipe-info-and-images left">
+                <Link to="/">
+                    <div className="back-arrow-container">
+                        <div className="back-arrow">
+                            <div className="square-container">
+                                <div className="square"></div>
+                            </div>
+                            <div className="stem"></div>
+                        </div>
+                    </div>
+                </Link>
+
+
+
                 <div className="date">
                     <span>{date}</span>
                 </div>
